@@ -1,0 +1,26 @@
+name: Feature Request
+description: 機能追加リクエスト
+title: "[Feat]: "
+labels: ["feat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 概要
+
+  - type: input
+    id: overview
+    attributes:
+      label: Overview
+      description: 概要を書く
+    validations:
+      required: false
+
+  - type: textarea
+    id: 
+    attributes:
+      label: What should be done?
+      description: やるべきことを書く
+      placeholder: 例)ボタンの色を変えたい
+    validations:
+      required: true
