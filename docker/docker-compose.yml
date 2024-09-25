@@ -1,0 +1,23 @@
+services:
+  gscap:
+    container_name: gscap
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    privileged: true
+    environment:
+      # X11の設定
+      - DISPLAY=host.docker.internal:0
+    volumes:
+      # ホストのディレクトリをコンテナにマウント
+      - type: bind
+        source: ../
+        target: /home/node/workspace/gscap
+      # node_modulesはvolumeでマウント
+      - type: volume
+        source: gscap-node-modules
+        target: /home/node/workspace/gscap/node_modules
+    tty: true
+
+volumes:
+  gscap-node-modules:

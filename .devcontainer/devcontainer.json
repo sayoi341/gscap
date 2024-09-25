@@ -1,23 +1,8 @@
 {
   "name": "gscap",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20.17.0"
-    }
-  },
-  "postCreateCommand": "$(which pnpm) i",
-  "runArgs": [
-    "--name",
-    "gscap"
-  ],
-  "mounts": [
-    {
-      "type": "volume",
-      "source": "gscap_node_modules",
-      "target": "${containerWorkspaceFolder}/node_modules"
-    }
-  ],
+  "workspaceFolder": "/home/node/workspace/gscap",
+  "dockerComposeFile": "../docker/docker-compose.yml",
+  "service": "gscap",
   "customizations": {
     "vscode": {
       "extensions": [
