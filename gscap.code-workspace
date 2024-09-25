@@ -3,6 +3,10 @@
     {
       "name": "📷 gscap",
       "path": "."
+    },
+    {
+      "name": "📄 pages",
+      "path": "./src/renderer/src"
     }
   ],
   "settings": {
@@ -54,6 +58,11 @@
             "label": "WIP: 🚧",
             "value": "WIP: 🚧",
             "description": "作業中",
+          },
+          {
+            "label": "chore: 🧹",
+            "value": "chore: 🧹",
+            "description": "その他の変更",
           }
         ],
       },
