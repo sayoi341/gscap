@@ -11,7 +11,8 @@
         "eamodio.gitlens",
         "oderwat.indent-rainbow",
         "GitHub.vscode-github-actions",
-        "adam-bender.commit-message-editor"
+        "adam-bender.commit-message-editor",
+        "biomejs.biome"
       ]
     }
   }
