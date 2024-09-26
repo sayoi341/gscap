@@ -107,19 +107,19 @@ type ArtifactSubStatus = {
 	critDmg?: number;
 };
 
-export class Artifact<T extends ArtifactPosition> {
+export class Artifact {
 	public hash: string;
 	public stars: number;
 	public set: ArtifactSet;
-	public position: T;
-	public mainStatus: ArtifactMainStatus<T>;
+	public position: ArtifactPosition;
+	public mainStatus: ArtifactMainStatus<ArtifactPosition>;
 	public subStatus: ArtifactSubStatus;
 
 	constructor(
 		stars: number,
 		set: ArtifactSet,
-		position: T,
-		mainStatus: ArtifactMainStatus<T>,
+		position: ArtifactPosition,
+		mainStatus: ArtifactMainStatus<ArtifactPosition>,
 		subStatus: ArtifactSubStatus,
 	) {
 		this.stars = stars;
