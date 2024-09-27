@@ -1,9 +1,9 @@
-import type { Artifact } from "./artifact.domain";
-import type { IArtifactRepository } from "./artifact.irepository";
+import type { Artifacts } from "./artifacts.domain";
+import type { IArtifactsRepository } from "./artifacts.repository.interface";
 
 export class ArtifactUseCase {
   // ここにリポジトリを受け取るコンストラクタを追加
-  constructor(private readonly repository: IArtifactRepository) {}
+  constructor(private readonly repository: IArtifactsRepository) {}
 
   // 聖遺物情報の取得
   getArtifact() {}

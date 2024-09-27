@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { Artifact } from "../../src/artifact/artifact.domain";
+import { Artifacts } from "../../src/artifacts/artifacts.domain";
 
 describe("Artifact", () => {
   it("インスタンス作成", () => {
-    const artifact = new Artifact(
+    const artifact = new Artifacts(
       5,
       "gladiatorsFinale",
       "sands",
@@ -27,7 +27,7 @@ describe("Artifact", () => {
   });
 
   it("ハッシュの確認", () => {
-    const artifact = new Artifact(
+    const artifact = new Artifacts(
       5,
       "gladiatorsFinale",
       "sands",
@@ -46,7 +46,7 @@ describe("Artifact", () => {
 
   it("部位とメインステータスの不一致", () => {
     expect(() => {
-      new Artifact(5, "gladiatorsFinale", "sands", "hp", {
+      new Artifacts(5, "gladiatorsFinale", "sands", "hp", {
         energyRecharge: 10,
         critRate: 10,
         critDmg: 10,
@@ -57,7 +57,7 @@ describe("Artifact", () => {
 
   it("サブステータスが5つ以上", () => {
     expect(() => {
-      new Artifact(5, "gladiatorsFinale", "sands", "atkPersent", {
+      new Artifacts(5, "gladiatorsFinale", "sands", "atkPersent", {
         energyRecharge: 10,
         critRate: 10,
         critDmg: 10,
@@ -69,7 +69,7 @@ describe("Artifact", () => {
 
   it("サブステータスがメインステータスと同じ", () => {
     expect(() => {
-      new Artifact(5, "gladiatorsFinale", "sands", "atkPersent", {
+      new Artifacts(5, "gladiatorsFinale", "sands", "atkPersent", {
         energyRecharge: 10,
         critRate: 10,
         critDmg: 10,

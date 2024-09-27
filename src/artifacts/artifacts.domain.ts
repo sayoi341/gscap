@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 
-type ArtifactSet =
+type ArtifactsSet =
   | "initiate"
   | "adventurer"
   | "luckyDog"
@@ -55,9 +55,9 @@ type ArtifactSet =
   | "scrollOfTheHeroOfCinderCity" // 灰燼の都に立つ英雄の絵巻
   | "obsidianCodex"; // 黒曜の秘典
 
-type ArtifactPosition = "flower" | "plume" | "sands" | "goblet" | "circlet";
+type ArtifactsPosition = "flower" | "plume" | "sands" | "goblet" | "circlet";
 
-const artifactMainStatusMap = {
+const artifactsMainStatusMap = {
   flower: ["hp"],
   plume: ["atk"],
   sands: [
@@ -91,10 +91,10 @@ const artifactMainStatusMap = {
   ],
 } as const;
 
-type ArtifactMainStatus<T extends ArtifactPosition> =
-  (typeof artifactMainStatusMap)[T][number];
+type ArtifactsMainStatus<T extends ArtifactsPosition> =
+  (typeof artifactsMainStatusMap)[T][number];
 
-type ArtifactSubStatus = {
+type ArtifactsSubStatus = {
   hp?: number;
   atk?: number;
   def?: number;
@@ -107,20 +107,20 @@ type ArtifactSubStatus = {
   critDmg?: number;
 };
 
-export class Artifact {
+export class Artifacts {
   public hash: string;
   public stars: number;
-  public set: ArtifactSet;
-  public position: ArtifactPosition;
-  public mainStatus: ArtifactMainStatus<ArtifactPosition>;
-  public subStatus: ArtifactSubStatus;
+  public set: ArtifactsSet;
+  public position: ArtifactsPosition;
+  public mainStatus: ArtifactsMainStatus<ArtifactsPosition>;
+  public subStatus: ArtifactsSubStatus;
 
   constructor(
     stars: number,
-    set: ArtifactSet,
-    position: ArtifactPosition,
-    mainStatus: ArtifactMainStatus<ArtifactPosition>,
-    subStatus: ArtifactSubStatus,
+    set: ArtifactsSet,
+    position: ArtifactsPosition,
+    mainStatus: ArtifactsMainStatus<ArtifactsPosition>,
+    subStatus: ArtifactsSubStatus,
   ) {
     this.stars = stars;
     this.set = set;
@@ -128,11 +128,11 @@ export class Artifact {
 
     // mainStatusがpositionで変化した型に対応しているかチェック
     if (
-      !(artifactMainStatusMap[position] as ReadonlyArray<string>).includes(
+      !(artifactsMainStatusMap[position] as ReadonlyArray<string>).includes(
         mainStatus,
       )
     ) {
-      throw new artifactDomainError("invalid artifact main status");
+      throw new ArtifactsDomainError("invalid artifacts main status");
     }
 
     this.mainStatus = mainStatus;
@@ -140,15 +140,15 @@ export class Artifact {
     // subStatusが4つ以下かチェック
     const subStatusKeys = Object.keys(subStatus) as string[];
     if (subStatusKeys.length > 4) {
-      throw new artifactDomainError(
-        "artifact sub status should be less than 4",
+      throw new ArtifactsDomainError(
+        "artifacts sub status should be less than 4",
       );
     }
 
     // subStatusがmainStatusと異なるかチェック
     if (subStatusKeys.includes(mainStatus as string)) {
-      throw new artifactDomainError(
-        "artifact sub status should not same main status",
+      throw new ArtifactsDomainError(
+        "artifacts sub status should not same main status",
       );
     }
 
@@ -167,9 +167,9 @@ export class Artifact {
   }
 }
 
-class artifactDomainError extends Error {
+class ArtifactsDomainError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = "ArtifactDomainError";
+    this.name = "artifactsDomainError";
   }
 }
