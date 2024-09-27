@@ -27,7 +27,10 @@ RUN localedef -f UTF-8 -i ja_JP ja_JP.utf8
 
 ENV QT_X11_NO_MITSHM=1
 
-RUN mkdir -p /home/node/workspace/gscap/node_modules && chown -R node:node /home/node/workspace
+RUN mkdir -p /home/node/workspace/gscap/node_modules && \
+  mkdir -p /home/node/workspace/gscap/.pnpm-store && \
+  chown -R node:node /home/node/workspace
+
 
 # set workdir
 WORKDIR /home/node/workspace
