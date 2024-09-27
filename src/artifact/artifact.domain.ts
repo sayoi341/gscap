@@ -79,7 +79,7 @@ const artifactMainStatusMap = {
     "electroDmgBonus", // 雷ダメージバフ
     "anemoDmgBonus", // 風ダメージバフ
     "cryoDmgBonus", // 氷ダメージバフ
-    "geoDmgBonus", //岩ダメージバフ
+    "geoDmgBonus", // 岩ダメージバフ
   ],
   circlet: [
     "atkPersent",
@@ -87,7 +87,7 @@ const artifactMainStatusMap = {
     "hpPersent",
     "elementalMastery", // 元素熟知
     "critRate", // 会心率
-    "critDmg", //会心ダメージ
+    "critDmg", // 会心ダメージ
   ],
 } as const;
 
