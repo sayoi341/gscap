@@ -42,14 +42,14 @@ type ArtifactSet =
   | "echoesOfAnOffering" // 来歆の余響
   | "deepWoodMemories" // 深林の記憶
   | "gildedDreams" // 金メッキの夢
-  | "desertPavilion" // 砂上の楼閣の史話
+  | "desertPavilionChronicle" // 砂上の楼閣の史話
   | "flowerOfParadiseLost" // 楽園の絶花
   | "nymphsDream" // 水仙の夢
   | "vourukashasGlow" // 花海甘露の光
   | "MarechausseeHunter" // ファントムハンター
   | "goldenTroupe" // 黄金の劇団
   | "songOfDaysPast" // 在りし日の歌
-  | "nighttimeWhisperInTheEchoingWoods" // 残響の森で囁かれる夜話
+  | "nighttimeWhispersInTheEchoingWoods" // 残響の森で囁かれる夜話
   | "fragmentOfHarmonicWhimsy" // 諧律奇想の断章
   | "unfinishedReverie" // 遂げられなかった想い
   | "scrollOfTheHeroOfCinderCity" // 灰燼の都に立つ英雄の絵巻
