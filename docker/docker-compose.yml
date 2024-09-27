@@ -13,11 +13,16 @@ services:
       - type: bind
         source: ../
         target: /home/node/workspace/gscap
-      # node_modulesはvolumeでマウント
+      # /node_modulesはvolumeでマウント
       - type: volume
         source: gscap-node-modules
         target: /home/node/workspace/gscap/node_modules
+      # /.pnpm-storeはvolumeでマウント
+      - type: volume
+        source: gscap-pnpm-store
+        target: /home/node/workspace/gscap/.pnpm-store
     tty: true
 
 volumes:
   gscap-node-modules:
+  gscap-pnpm-store:
