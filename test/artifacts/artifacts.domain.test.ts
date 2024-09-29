@@ -52,7 +52,7 @@ describe("Artifact", () => {
         critDmg: 10,
         hp: 10,
       });
-    }).toThrow("invalid artifact main status");
+    }).toThrow("invalid artifacts main status");
   });
 
   it("サブステータスが5つ以上", () => {
@@ -64,7 +64,7 @@ describe("Artifact", () => {
         hp: 10,
         atk: 10,
       });
-    }).toThrow("artifact sub status should be less than 4");
+    }).toThrow("artifacts sub status should be less than 4");
   });
 
   it("サブステータスがメインステータスと同じ", () => {
@@ -75,6 +75,6 @@ describe("Artifact", () => {
         critDmg: 10,
         atkPersent: 10,
       });
-    }).toThrow("artifact sub status should not same main status");
+    }).toThrow("artifacts sub status should not same main status");
   });
 });
