@@ -1,9 +1,9 @@
-name: build
+name: vitest
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: build
+  vitest:
+    name: vitest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
