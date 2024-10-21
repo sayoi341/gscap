@@ -1,8 +1,8 @@
 node_modules
-.git
-*.md
-dist
-out
-.DS_Store
-*.log*
 .pnpm-store
+
+out
+build
+dist
+
+.DS_Store
