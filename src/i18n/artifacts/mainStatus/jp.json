@@ -1,0 +1,20 @@
+{
+  "hp": "HP",
+  "atk": "攻撃力",
+  "hpPercent": "HP%",
+  "atkPercent": "攻撃力%",
+  "defPersent": "防御力%",
+  "elementalMastery": "元素熟知",
+  "energyRecharge": "元素チャージ効率",
+  "physicalDmgBonus": "物理ダメージ",
+  "pyroDmgBonus": "炎ダメージ",
+  "hydroDmgBonus": "水ダメージ",
+  "dendroDmgBonus": "草ダメージ",
+  "electroDmgBonus": "雷ダメージ",
+  "anemoDmgBonus": "風ダメージ",
+  "cryoDmgBonus": "氷ダメージ",
+  "geoDmgBonus": "岩ダメージ",
+  "critRate": "会心率",
+  "critDmg": "会心ダメージ",
+  "healingBonus": "与える治癒効果"
+}
