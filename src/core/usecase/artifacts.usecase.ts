@@ -1,5 +1,4 @@
-import type { Artifacts } from "./artifacts.domain";
-import type { IArtifactsRepository } from "./artifacts.repository.interface";
+import type { IArtifactsRepository } from "../infra/repository/artifacts.repository.interface";
 
 export class ArtifactUseCase {
   // ここにリポジトリを受け取るコンストラクタを追加
