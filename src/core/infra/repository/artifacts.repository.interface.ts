@@ -1,4 +1,4 @@
-import type { Artifacts } from "./artifacts.domain";
+import type { Artifacts } from "../../domain/artifacts.domain";
 
 export interface IArtifactsRepository {
   // 作成
