@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { Artifacts } from "../../src/artifacts/artifacts.domain";
+import { Artifacts } from "../../../src/core/domain/artifacts.domain";
 
 describe("Artifact", () => {
   it("インスタンス作成", () => {
