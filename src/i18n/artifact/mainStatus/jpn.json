@@ -1,9 +1,7 @@
 {
   "hp": "HP",
   "atk": "攻撃力",
-  "hpPercent": "HP%",
-  "atkPercent": "攻撃力%",
-  "defPersent": "防御力%",
+  "def": "防御力",
   "elementalMastery": "元素熟知",
   "energyRecharge": "元素チャージ効率",
   "physicalDmgBonus": "物理ダメージ",
