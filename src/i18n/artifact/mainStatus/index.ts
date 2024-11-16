@@ -1,10 +1,9 @@
+import * as jpn from "./jpn.json";
+
 interface MainStatus {
   hp: string;
   atk: string;
-
-  hpPersent: string;
-  atkPersent: string;
-  defPersent: string;
+  def: string;
 
   elementalMastery: string;
   energyRecharge: string;
@@ -25,4 +24,6 @@ interface MainStatus {
 
 declare const mainStatus: MainStatus;
 
-export default mainStatus;
+export const mainStatusTranslateData: { [key in string]: MainStatus } = {
+  jpn: jpn,
+};
