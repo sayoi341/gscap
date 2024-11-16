@@ -1,4 +1,4 @@
-FROM node:20.17.0
+FROM node:20.18.0
 
 # Install PNPM
 ENV PNPM_HOME="/pnpm"
