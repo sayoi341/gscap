@@ -29,6 +29,7 @@ const artifactSet = [
   "archaicPetra", // 悠久の盤岩
   "retracingBolide", // 逆飛びの流星
   "thunderSoother", // 雷を鎮める尊者
+  "thunderingFury", // 雷のような怒り"
   "lavawalker", // 烈火を渡る賢者
   "crimsonWitchOfFlames", // 燃え盛る炎の魔女
   "blizzardStrayer", // 氷風を彷徨う勇士
