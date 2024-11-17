@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "downlevelIteration": true
   },
   "files": [],
   "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "vitest.config.mts"],
