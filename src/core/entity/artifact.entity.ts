@@ -1,4 +1,3 @@
-import exp = require("node:constants");
 import { createHash } from "node:crypto";
 
 const artifactSet = [
