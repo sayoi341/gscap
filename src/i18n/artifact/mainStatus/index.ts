@@ -1,26 +1,29 @@
 import * as jpn from "./jpn.json";
 
-interface MainStatus {
-  hp: string;
-  atk: string;
-  def: string;
+const artifactMainStatus = [
+  "hp",
+  "atk",
+  "def",
+  "elementalMastery",
+  "energyRecharge",
+  "physicalDmgBonus",
+  "pyroDmgBonus",
+  "hydroDmgBonus",
+  "dendroDmgBonus",
+  "electroDmgBonus",
+  "anemoDmgBonus",
+  "cryoDmgBonus",
+  "geoDmgBonus",
+  "critRate",
+  "critDmg",
+  "healingBonus",
+] as const;
 
-  elementalMastery: string;
-  energyRecharge: string;
+type ArtifactMainStatus = (typeof artifactMainStatus)[number];
 
-  physicalDmgBonus: string;
-  pyroDmgBonus: string;
-  hydroDmgBonus: string;
-  dendroDmgBonus: string;
-  electroDmgBonus: string;
-  anemoDmgBonus: string;
-  cryoDmgBonus: string;
-  geoDmgBonus: string;
-
-  critRate: string;
-  critDmg: string;
-  healingBonus: string;
-}
+type MainStatus = {
+  [key in ArtifactMainStatus]: string;
+};
 
 declare const mainStatus: MainStatus;
 

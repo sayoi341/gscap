@@ -1,14 +1,20 @@
 import * as jpn from "./jpn.json";
 
-interface SubStatuses {
-  hp: string;
-  atk: string;
-  def: string;
-  elementalMastery: string;
-  energyRecharge: string;
-  critRate: string;
-  critDmg: string;
-}
+const artifactSubStatuses = [
+  "hp",
+  "atk",
+  "def",
+  "elementalMastery",
+  "energyRecharge",
+  "critRate",
+  "critDmg",
+] as const;
+
+type ArtifactSubStatuses = (typeof artifactSubStatuses)[number];
+
+type SubStatuses = {
+  [key in ArtifactSubStatuses]: string;
+};
 
 declare const subStatuses: SubStatuses;
 

@@ -1,5 +1,15 @@
 {
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "downlevelIteration": true
+  },
   "files": [],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "vitest.config.mts"],
+  "exclude": ["node_modules"],
   "references": [
     { "path": "./tsconfig.node.json" },
     { "path": "./tsconfig.web.json" }
