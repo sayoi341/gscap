@@ -5,6 +5,11 @@ jobs:
   vitest:
     name: vitest
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,4 +26,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Tests Check
-        run: pnpm test
+        run: pnpm test:coverage
+
+      - name: Report Coverage
+        if: always() 
+        uses:  davelosert/vitest-coverage-report-action@v2
