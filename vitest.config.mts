@@ -8,10 +8,10 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "json", "json-summary"],
       reportOnFailure: true,
-      include: ["**/src/**"],
+      include: ["**/src/**/*.?(ts|mts|tsx)"],
       exclude: [
         "**/src/i18n/**",
-        "**/out/**",
+        "**/*.dto.ts",
         "**/*.interface.ts",
         "**/*.d.ts",
       ],
