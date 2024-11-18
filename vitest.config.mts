@@ -8,6 +8,13 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "json", "json-summary"],
       reportOnFailure: true,
+      include: ["**/src/**"],
+      exclude: [
+        "**/src/i18n/**",
+        "**/out/**",
+        "**/*.interface.ts",
+        "**/*.d.ts",
+      ],
     },
   },
 });
