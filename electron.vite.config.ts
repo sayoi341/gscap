@@ -8,7 +8,7 @@ export default defineConfig({
     build: {
       lib: {
         entry: "src/main/index.mts",
-        formats: ["cjs"],
+        formats: ["es"],
       },
     },
   },
@@ -17,7 +17,7 @@ export default defineConfig({
     build: {
       lib: {
         entry: "src/preload/index.mts",
-        formats: ["cjs"],
+        formats: ["es"],
       },
     },
   },
