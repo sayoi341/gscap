@@ -19,7 +19,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-${{ hashFiles('pnpm-lock.json') }}
 
       - name: Build Check
         run: devbox run pnpm build:unpack
