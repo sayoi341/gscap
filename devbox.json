@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
   "packages": [
     "nodejs@20",
-    "pnpm_9@latest"
+    "pnpm@latest"
   ],
   "shell": {
     "init_hook": [
