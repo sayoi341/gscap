@@ -13,5 +13,12 @@ jobs:
       - name: Setup Devbox
         uses: ./.github/actions/setup_devbox
 
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
       - name: Install Dependencies
         run: devbox run pnpm install --frozen-lockfile
