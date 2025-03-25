@@ -1,9 +1,24 @@
-name: vitest
-on: [push, pull_request]
+name: _verify
+
+on:
+  workflow_call:
 
 jobs:
-  vitest:
-    name: vitest
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Biome CLI
+        uses: biomejs/setup-biome@v2
+
+      - name: Run Biome
+        run: biome ci .
+
+  test:
+    name: test
     runs-on: ubuntu-latest
 
     permissions:
@@ -14,18 +29,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js Environment
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-
-      - name: Setup pnpm
-        run: corepack enable pnpm
+      - name: Setup Devbox
+        uses: ./.github/actions/setup_devbox
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Tests Check
+      - name: Tests
         run: pnpm test:coverage
 
       - name: Report Coverage

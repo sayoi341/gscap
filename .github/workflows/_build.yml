@@ -1,0 +1,21 @@
+name: build
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Devbox
+        uses: ./.github/actions/setup_devbox
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Check
+        run: pnpm build:unpack
