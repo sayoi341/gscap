@@ -15,7 +15,7 @@ jobs:
         uses: ./.github/actions/setup_devbox
 
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: devbox run pnpm install --frozen-lockfile
 
       - name: Build Check
-        run: pnpm build:unpack
+        run: devbox run pnpm build:unpack
