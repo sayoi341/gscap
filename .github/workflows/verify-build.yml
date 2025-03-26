@@ -1,0 +1,20 @@
+name: Verify and Build
+
+on: 
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  install-pnpm-deps:
+    uses: ./.github/workflows/_install_pnpm_deps.yml
+
+  verify:
+    needs: install-pnpm-deps
+    uses: ./.github/workflows/_verify.yml
+
+  build:
+    needs: verify
+    uses: ./.github/workflows/_build.yml

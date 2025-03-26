@@ -1,0 +1,24 @@
+name: _install_pnpm_deps
+
+on:
+  workflow_call:
+
+jobs:
+  cache-and-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Devbox
+        uses: ./.github/actions/setup_devbox
+
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Install Dependencies
+        run: devbox run pnpm install --frozen-lockfile
