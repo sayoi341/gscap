@@ -24,13 +24,11 @@
     "typecheck": "pnpm run typecheck:node && pnpm run typecheck:web",
     "postinstall": "electron-builder install-app-deps"
   },
-  "dependencies": {
+  "devDependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^4.0.0",
     "image-js": "^0.36.0",
-    "tesseract.js": "^6.0.0"
-  },
-  "devDependencies": {
+    "tesseract.js": "^6.0.0",
     "@biomejs/biome": "1.9.4",
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@types/node": "^22.13.14",
