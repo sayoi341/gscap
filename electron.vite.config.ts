@@ -1,10 +1,9 @@
 import react from "@vitejs/plugin-react";
-import { defineConfig, externalizeDepsPlugin } from "electron-vite";
+import { defineConfig } from "electron-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()],
     build: {
       lib: {
         entry: "src/main/index.mts",
@@ -13,7 +12,6 @@ export default defineConfig({
     },
   },
   preload: {
-    plugins: [externalizeDepsPlugin()],
     build: {
       lib: {
         entry: "src/preload/index.mts",
