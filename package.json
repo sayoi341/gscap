@@ -25,12 +25,10 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "@electron-toolkit/preload": "^3.0.1",
-    "@electron-toolkit/utils": "^4.0.0",
-    "image-js": "^0.36.0",
-    "tesseract.js": "^6.0.0",
     "@biomejs/biome": "1.9.4",
+    "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@electron-toolkit/utils": "^4.0.0",
     "@types/node": "^22.13.14",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
@@ -39,9 +37,11 @@
     "electron": "^35.1.2",
     "electron-builder": "^26.0.12",
     "electron-vite": "^3.1.0",
+    "image-js": "^0.36.0",
     "lefthook": "^1.11.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "tesseract.js": "^6.0.0",
     "typescript": "^5.8.2",
     "vite": "^6.2.3",
     "vite-tsconfig-paths": "^5.1.4",
@@ -55,6 +55,7 @@
     "onlyBuiltDependencies": [
       "@biomejs/biome",
       "electron",
+      "electron-winstaller",
       "esbuild",
       "lefthook",
       "tesseract.js"
