@@ -51,5 +51,14 @@
   "packageManager": "pnpm@10.6.3",
   "engines": {
     "node": "22.14.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "electron",
+      "esbuild",
+      "lefthook",
+      "tesseract.js"
+    ]
   }
 }
